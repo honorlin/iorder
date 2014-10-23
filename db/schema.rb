@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141023070321) do
+ActiveRecord::Schema.define(version: 20141023072943) do
 
   create_table "comments", force: true do |t|
     t.integer  "shop_id"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20141023070321) do
   create_table "competitions", force: true do |t|
     t.integer  "shop_id"
     t.integer  "user_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", force: true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "date"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
