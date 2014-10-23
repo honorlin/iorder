@@ -18,7 +18,8 @@
 			</p>
 			<p>
 				<%= f.label :menu_image, "菜單" %>
-				<%= f.file_field :menu_image, :class => "form-control" %>
+				<%= f.file_field :menu_image, :class => "form-control" %>	
+				<%= image_tag @shop.menu_image %>
 			</p>
 			<p>
 				<%= f.submit "更新", :class => "btn btn-default"  %>

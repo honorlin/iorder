@@ -1,11 +1,27 @@
-
+	
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title">餐廳資料</h3>
   </div>
   <div class="panel-body">
-		
-		<p><%= link_to "返回", :back, :class => "btn btn-lg btn-primary" %></p>
+		<%= form_for @shop do |f| %>
+			<p>
+				<%= f.label :name, "名稱" %>
+				<%= f.label :name, :class => "form-control" %>
+			</p>
+			<p>
+				<%= f.label :location, "地點" %>
+				<%= f.label :location, :class => "form-control" %>
+			</p>
+			<p>
+				<%= f.label :hours, "營業時間" %>
+				<%= f.label :hours, :class => "form-control" %>
+			</p>
+			<p>
+				<%= f.label :menu_image, "菜單" %>
+				<%= image_tag @shop.menu_image %>
+			</p>
+				<p><%= link_to "返回", :back, :class => "btn btn-lg btn-primary" %></p>
+		<% end %>
 	</div>
 </div>
-	
