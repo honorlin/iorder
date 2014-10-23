@@ -1,0 +1,24 @@
+<p style="text-align: right;">
+	<%= link_to "新增開團", new_shop_path, :class => "btn btn-lg btn-primary" %>
+</p>
+<table class="table">
+	<tbody>
+		<tr>		
+			<th>編號</th>
+			<th>名稱</th>
+			<th>日期</th>
+			<th>更新</th>
+			<th>刪除</th>
+		</tr>
+		<% @groups.each do |group|%>
+			<tr>
+				<td><%= group.id %></td>
+				<td><%= group.tite %></td>	
+				<td><%= group.date %></td>	
+				<td><%= link_to "查看", group_path(group), :class => "btn btn-info" %></td>
+				<td><%= link_to "更新", edit_group_path(group), :class => "btn btn-success"  %></td>
+				<td><%= link_to "刪除", group_path(group), method: :delete, data: { :confirm => "確定要刪除嗎?" }, :class => "btn btn-danger"  %></td>
+			</tr>
+		<% end %>
+	<tbody>
+</table>

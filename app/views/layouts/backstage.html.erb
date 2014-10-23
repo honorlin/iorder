@@ -30,7 +30,7 @@
             <ul class="nav navbar-nav navbar-right">
               <% if current_user %>
                 <li><a href="/shops/">餐廳管理</a></li>
-                <li><a href="/watches/">出團管理</a></li>
+                <li><a href="/groups/">出團管理</a></li>
                 <li><%= link_to('登出', destroy_user_session_path, :method => :delete) %></li>
                 <li><%= link_to('修改密碼', edit_registration_path(:user)) %></li>
               <% else %>
