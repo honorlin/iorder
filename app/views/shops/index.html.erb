@@ -1,0 +1,26 @@
+<p style="text-align: right;">
+	<%= link_to "新增餐廳", new_shop_path, :class => "btn btn-lg btn-primary" %>
+</p>
+<table class="table">
+	<tbody>
+		<tr>		
+			<th>編號</th>
+			<th>名稱</th>
+			<th>地址</th>
+			<th>營業時間</th>
+			<th>更新</th>
+			<th>刪除</th>
+		</tr>
+		<% @shops.each do |shop|%>
+			<tr>
+				<td><%= shop.id %></td>
+				<td><%= shop.name %></td>	
+				<td><%= shop.location %></td>	
+				<td><%= shop.hours %></td>
+				<td><%= link_to "查看", shop_path(shop), :class => "btn btn-info" %></td>
+				<td><%= link_to "更新", edit_shop_path(shop), :class => "btn btn-success"  %></td>
+				<td><%= link_to "刪除", shop_path(shop), method: :delete, data: { :confirm => "確定要刪除嗎?" }, :class => "btn btn-danger"  %></td>
+			</tr>
+		<% end %>
+	<tbody>
+</table>

@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">新增餐廳</h3>
+  </div>
+  <div class="panel-body">
+		<%= form_for @shop do |f| %>
+			<p>
+				<%= f.label :name, "名稱" %>
+				<%= f.text_field :name, :class => "form-control" %>
+			</p>
+			<p>
+				<%= f.label :location, "地點" %>
+				<%= f.text_field :location, :class => "form-control" %>
+			</p>
+			<p>
+				<%= f.label :hours, "營業時間" %>
+				<%= f.text_field :hours, :class => "form-control" %>
+			</p>
+			<p>
+				<%= f.label :menu_image, "菜單" %>
+				<%= f.file_field :menu_image, :class => "form-control" %>
+			</p>
+			<p>
+				<%= f.submit "更新", :class => "btn btn-default"  %>
+			</p>
+		<% end %>
+	</div>
+</div>
